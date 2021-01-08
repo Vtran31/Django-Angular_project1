@@ -14,8 +14,12 @@ export class AddEditEmpComponent implements OnInit {
   EmployeesName:string | undefined;
   Department:string | undefined;
   DateOfJoin:string | undefined;
+  DepartmentList: any = [];
 
   ngOnInit(): void {
+    this.service.getAllDepNames().subscribe((data:any) =>{
+      this.DepartmentList = data; 
+    });
   }
 
   addEmployee(){
