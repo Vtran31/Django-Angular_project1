@@ -1,0 +1,18 @@
+<h5>Add Edit Employees </h5>
+<div class="form-froup row">
+    <label class="col-sm-2 col-form-label">Employee Name</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="EmployeesName" placeholder="Enter Employye Name">
+    </div>
+    <label class="col-sm-2 col-form-label">Department</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="Department" placeholder="Enter Department Name">
+    </div>
+    <label class="col-sm-2 col-form-label">Date Of Join</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="DateOfJoin" placeholder="yyyy-mm-dd">
+    </div>
+    <label class="col-sm-2 col-form-label">EmployeesID: {{ emp.EmployeesId }} </label>
+</div>
+<button (click)="addEmployee()" *ngIf="emp.EmployeesId==0" class="btn btn-primary">Add</button>
+<button (click)="editEMployee()" *ngIf="emp.EmployeesId != 0" class="btn btn-primary">Update</button>
